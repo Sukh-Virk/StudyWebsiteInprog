@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Chat Bot</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="prepage.html">Flashcards</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="study.html">Study Technique</a></li>
+        </ul>
+    </nav>
+
+
+    <header>
+        <h1>Welcome to Sukhman's Chat Bot</h1>
+        <div class="instructions">
+            <p>⚠️ This bot is limited due to API restrictions:</p>
+            <ul>
+                <li>Math queries: Use numbers and basic operations like <code><span class="highlight">2+2</span></code>.</li>
+                <li>General questions: Example: <code><span class="highlight">What is Indian Chai?</span></code></li>
+                <li>Say <b>Hi</b> for a greeting response!</li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages"></div>
+                <div class="chat-input">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        placeholder="Type your message here..." 
+                        onkeypress="handleKeyPress(event)"
+                    >
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script4.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* 🌌 General Page Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to bottom, #1a0033, #2a004a, #1a0033);
+    overflow: hidden;
+    position: relative;
+}
+
+/* 🌌 Background Glow Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg');
+    background-size: cover;
+    z-index: -2;
+    opacity: 0.2;
+    filter: blur(4px) brightness(0.5);
+}
+
+/* ✨ Glassmorphism Container */
+.intro-container {
+    margin: 50px auto;
+    padding: 40px;
+    max-width: 800px;
+    background: rgba(50, 0, 100, 0.4);
+    border: 1px solid rgba(140, 82, 255, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(140, 82, 255, 0.4);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+/* 🤖 Robot Styling */
+.intro-robot {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: floatBot 5s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px #8a2be2);
+}
+
+
+
+/* Robot Floating Animation */
+@keyframes floatBot {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* HEADER - Welcome Text */
+h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #fff;
+    text-shadow: 0 0 15px #8a2be2, 0 0 25px #b266ff;
+    margin-bottom: 20px;
+}
+
+/* 🤖 Robot Container */
+.bot-container {
+    position: relative;
+    width: 200px;
+    margin: 250px auto 100px auto; /* Increased top margin to move both down */
+    animation: floatBot 5s ease-in-out infinite;
+    z-index: 2;
+}
+
+/* 💬 Robot Chat Bubble */
+.robot-chat {
+    position: absolute;
+    top: -20px; /* Moves bubble closer to the robot after moving both down */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 0.9em;
+    background: rgba(140, 82, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #b266ff;
+    color: #fff;
+    text-align: center;
+    max-width: 300px;
+    z-index: 3;
+    text-shadow: none;
+}
+
+
+
+.robot-chat::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Pointer directly below the bubble */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(140, 82, 255, 0.8);
+}
+
+/* Paragraph Text */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 15px auto;
+    max-width: 600px;
+    color: #d9bfff;
+    text-shadow: 0 0 5px #8c52ff;
+}
+
+/* 🚀 Start Game Button */
+#start-game {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(90deg, #8c52ff, #b266ff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #8c52ff, 0 0 20px #b266ff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#start-game:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #8c52ff, 0 0 40px #b266ff;
+}
+
+/* 🪄 Button Group */
+.button-group {
+    margin-top: 30px;
+}
+
+.button-group button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background: linear-gradient(90deg, #6a5acd, #8a2be2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.button-group button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #6a5acd, 0 0 30px #8a2be2;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .intro-robot {
+        width: 150px;
+    }
+
+    #start-game {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .button-group button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}

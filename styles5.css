@@ -1,0 +1,159 @@
+/* RESET */
+body, h1, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - Futuristic Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ✨ Particle Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg');
+    background-size: cover;
+    z-index: -2;
+    animation: pulseGlow 20s infinite alternate;
+    opacity: 0.3;
+}
+
+/* Particle Animation */
+@keyframes pulseGlow {
+    0% { filter: blur(2px); }
+    100% { filter: blur(8px); }
+}
+
+/* 🧭 NAVIGATION BAR */
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 70%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #6a5acd, #8a2be2);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+    transform: scale(1.2);
+}
+
+/* 📝 ABOUT ME SECTION */
+.about-me-container {
+    margin: 50px auto;
+    padding: 40px;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* 🖼️ Profile Image */
+.about-image {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 50%;
+    border: 4px solid #6a5acd;
+    box-shadow: 0 0 20px #8a2be2;
+    animation: floatImage 3s infinite alternate ease-in-out;
+}
+
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+/* 📝 About Text */
+.about-text {
+    flex: 2;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.about-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #6a5acd, 0 0 20px #8a2be2;
+    animation: glowText 2s infinite alternate;
+}
+
+.about-text h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-shadow: 0 0 8px #4f46e5;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* 🚀 Call to Action Button */
+.feature-button {
+    margin-top: 20px;
+    display: inline-block;
+    background: linear-gradient(135deg, #4f46e5, #6a5acd);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #6a5acd;
+    transition: all 0.3s ease;
+}
+
+.feature-button:hover {
+    box-shadow: 0 0 40px #8a2be2;
+    transform: scale(1.1);
+}
+
+/* 📌 Footer */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}

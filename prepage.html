@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to the Game!</title>
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+    <div class="intro-container">
+        <img src="./IMAGES/sukbot.png" alt="Friendly Robot" class="intro-robot">
+        <h1>🤖 Welcome to the Game! 🤖</h1>
+        <div class="robot-chat">
+            "Hello! I'm your robot buddy, ready to cheer you on! Click Start to begin your adventure!"
+        </div>
+        <p>Create Questions and Answers! Test your memory click start!</p>
+        <button id="start-game">Start Game</button>
+    </div>
+    
+  <script>
+    document.getElementById('start-game').addEventListener('click', () => {
+      window.location.href = 'card.html';
+    });
+  </script>
+</body>
+</html>

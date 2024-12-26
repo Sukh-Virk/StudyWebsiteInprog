@@ -1,0 +1,285 @@
+/* RESET */
+body, h1, p, ul, li, a, button {
+    margin: 0;
+    padding: 20;
+    box-sizing: border-box;
+}
+
+/* BODY - Futuristic Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ✨ Particle Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg');
+    background-size: cover;
+    z-index: -2;
+    animation: pulseGlow 20s infinite alternate;
+    opacity: 0.3;
+}
+
+/* Particle Animation */
+@keyframes pulseGlow {
+    0% { filter: blur(2px); }
+    100% { filter: blur(8px); }
+}
+
+/* HEADER - Cyberpunk Glassmorphism */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 80%;
+    text-align: center;
+    overflow: hidden;
+    animation: neonBorder 3s infinite alternate;
+}
+
+/* Neon Border Animation */
+@keyframes neonBorder {
+    0% { border-color: #6a5acd; }
+    100% { border-color: #8a2be2; }
+}
+
+header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px #6a5acd, 0 0 40px #8a2be2;
+    animation: glowText 2s infinite alternate;
+}
+
+/* Glowing Text Animation */
+@keyframes glowText {
+    0% { text-shadow: 0 0 20px #6a5acd; }
+    100% { text-shadow: 0 0 40px #8a2be2; }
+}
+
+/* 🤖 ROBOT SECTION - Floating Bot with Light Effects */
+.bot-container {
+    position: relative;
+    width: 300px;
+    margin: 50px auto;
+    animation: floatBot 5s ease-in-out infinite;
+    perspective: 800px;
+    z-index: 10;
+    margin-top: 100px; /* Adjust the value to move the robot further down */
+}
+
+
+#bot {
+    width: 100%;
+    transform-origin: center;
+    animation: rotateBot 6s infinite ease-in-out;
+}
+
+.bot-image {
+    width: 250px;
+    height: auto;
+}
+
+
+/* Chat Bubble Animation */
+@keyframes glowBubble {
+    0% { box-shadow: 0 0 10px #6a5acd; }
+    100% { box-shadow: 0 0 30px #8a2be2; }
+}
+
+/* Floating Bot Animation */
+@keyframes floatBot {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Rotating Bot Animation */
+@keyframes rotateBot {
+    0%, 100% { transform: rotateY(0deg); }
+    50% { transform: rotateY(20deg); }
+}
+
+/* 🧭 NAVIGATION BAR - Glowing Hover Effects */
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 70%;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: linear-gradient(135deg, #6a5acd, #8a2be2);
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.8);
+    transform: scale(1.2);
+}
+
+/* 📝 MAIN CONTENT - Parallax Hover Effect */
+main .main-container {
+    margin: 50px auto;
+    padding: 40px;
+    max-width: 850px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+main .main-container:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
+
+main p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* 🚀 BUTTONS - Neon Glow with Cool Animations */
+.feature-button {
+    background: linear-gradient(135deg, #4f46e5, #6a5acd);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #6a5acd;
+    transition: all 0.3s ease, transform 0.2s ease-in-out;
+    animation: pulseGlowButton 2s infinite alternate;
+}
+
+/* Button Hover Animation */
+.feature-button:hover {
+    box-shadow: 0 0 40px #8a2be2;
+    transform: scale(1.1) rotate(-3deg);
+    animation: buttonWobble 0.4s ease-in-out;
+}
+
+/* Button Click Effect */
+.feature-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 25px #4f46e5;
+}
+
+/* 🔄 Pulse Animation */
+@keyframes pulseGlowButton {
+    0% {
+        box-shadow: 0 0 15px #6a5acd;
+    }
+    100% {
+        box-shadow: 0 0 30px #8a2be2;
+    }
+}
+
+/* 🎯 Wobble Animation */
+@keyframes buttonWobble {
+    0% {
+        transform: scale(1.1) rotate(0deg);
+    }
+    25% {
+        transform: scale(1.15) rotate(2deg);
+    }
+    50% {
+        transform: scale(1.1) rotate(-2deg);
+    }
+    75% {
+        transform: scale(1.15) rotate(1deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(0deg);
+    }
+}
+.eye {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+    transform-origin: center;
+    transition: transform 0.1s ease-out;
+}
+
+.left-eye {
+    right: 150px;
+    bottom: 100px;
+}
+
+.right-eye {
+    right: 75px;
+    bottom: 100px;
+}
+/* 🤖 CHAT BUBBLE (Attached to the Robot) */
+/* 🤖 CHAT BUBBLE (Longer and Multi-line Text) */
+.chat-bubble {
+    position: absolute;
+    top: -60px; /* Adjust position slightly above robot */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    font-size: 1rem;
+    text-align: center;
+    width: 320px; /* Increased width */
+    min-height: 60px; /* Optional: Set a minimum height */
+    max-width: 90%; /* Optional: Prevent it from being too wide on smaller screens */
+    animation: glowBubble 2s infinite alternate;
+    z-index: 200; /* Ensure it stays above the robot */
+    overflow: hidden;
+    white-space: normal; /* Allow text to wrap */
+    text-overflow: clip; /* Remove ellipsis if not needed */
+    word-wrap: break-word; /* Break long words */
+}
+
+
+/* Chat Bubble Glow Animation */
+@keyframes glowBubble {
+    0% {
+        box-shadow: 0 0 10px #6a5acd;
+    }
+    100% {
+        box-shadow: 0 0 30px #8a2be2;
+    }
+}

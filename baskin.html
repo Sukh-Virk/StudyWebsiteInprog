@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baskin-Robbins - Ice Cream Wonderland</title>
+    <link rel="stylesheet" href="stylesb.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <!-- HEADER SECTION -->
+        <header>
+            <a href="https://www.baskinrobbins.com/" target="_blank">
+                <img src="./IMAGES/R-removebg-preview.png" class="logo" alt="Baskin Robbins Logo">
+            </a>
+            <ul>
+                <li><a href="https://www.baskinrobbins.com/menu" target="_blank">Flavors</a></li>
+                <li><a href="https://www.baskinrobbins.com/specials" target="_blank">Specials</a></li>
+                <li><a href="https://www.baskinrobbins.com/contact-us" target="_blank">Contact</a></li>
+            </ul>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <div class="content">
+            <div class="textBox">
+                <h2>This is no ordinary Ice Cream. It's <span>Baskin-Robbins</span></h2>
+                <p>Indulge in a world of creamy delights with 31 irresistible flavors made just for you. A treat for every mood, every day!</p>
+                <p class="highlight-name">Made by <strong>Sukhman Virk</strong></p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        
+           
+            <div class="circle-content">
+              <img src="./IMAGES/OIP-removebg-preview.png" class="milkshake">
+               
+            </div>
+            
+            
+        </div>
+
+
+        <footer>
+            <p>Made by <strong>Sukhman Virk</strong></p>
+        </footer>
+
+        <!-- THUMBNAILS -->
+        <ul class="thumb">
+            <li><img src="./IMAGES/1000019227.png" onclick="imgSlider('./images/wild_n_reckless_bucket.png'); changeCircleColor('#ff80ab')"></li>
+            <li><img src="./IMAGES/wild-removebg-preview.png" onclick="imgSlider('./images/mint_chocolate_chip_scoop.png'); changeCircleColor('#a2d2ff')"></li>
+            <li><img src="./IMAGES/Screenshot_2024-12-21_005003-removebg-preview.png" onclick="imgSlider('./images/cookies_n_cream_scoop.png'); changeCircleColor('#ffefd5')"></li>
+        </ul>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.baskin').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer with YouTube Music</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="prepage.html">Flashcards</a></li>
+          <li><a href="chatbot.html">Chatbot</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="study.html">Study Technique</a></li>
+        </ul>
+      </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>⏰ Modern Pomodoro Timer</h1>
+        <p>Focus for 25 minutes, then take a 5-minute break!</p>
+    </header>
+
+
+
+    <!-- Timer Section -->
+    <section class="timer-container">
+        <div class="modern-clock">
+            <div class="clock-display" id="timer-display">25:00</div>
+            <div class="clock-controls">
+                <button id="start-timer" class="btn">Start</button>
+                <button id="pause-timer" class="btn">Pause</button>
+                <button id="reset-timer" class="btn">Reset</button>
+            </div>
+        </div>
+    </section>
+
+               <!-- Bot Animation Section -->
+<section class="bot-animation">
+    <img id="bot-image" src="./IMAGES/sukbot.png" alt="Bot Studying">
+</section>
+
+<section class="music-controls">
+    <h3>🎵 Choose Your Study Music, click video to pause.</h3>
+    <button id="play-calm-radio" class="btn">🎵 Play Calm Radio</button>
+</section>
+
+<section class="youtube-player">
+    <iframe 
+        id="youtube-player"
+        width="560" 
+        height="315" 
+        src=""
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen
+        style="display: none;">
+    </iframe>
+</section>
+
+
+    <!-- Message Section -->
+    <section id="message">
+        <p id="timer-message">🎧 Ready for a focused session!</p>
+    </section>
+
+
+    <script src="script2.js"></script>
+</body>
+</html>

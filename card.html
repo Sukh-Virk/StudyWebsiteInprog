@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Game</title>
+  <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="baskin.html">Baskin</a></li>
+      <li><a href="card.html">Flashcards</a></li>
+      <li><a href="chatbot.html">Chatbot</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="prepage.html">Prepage</a></li>
+      <li><a href="study.html">Study Technique</a></li>
+    </ul>
+  </nav>
+
+  <h1>🔥 Flashcard Game 🔥</h1>
+  
+  <!-- Flashcard Creation Section -->
+  <div class="flashcard-creator">
+    <h2>Create a Flashcard</h2>
+    <input type="text" id="question" placeholder="Enter question">
+    <input type="text" id="answer" placeholder="Enter answer">
+    <button id="add-flashcard">Add Flashcard</button>
+  </div>
+
+  
+
+
+  <!-- Flashcard Quiz Section -->
+  <div class="flashcard-quiz">
+    <h2>Quiz Time!</h2>
+    <button id="start-quiz">Start Quiz</button>
+    <div id="quiz-card" class="hidden">
+      <p id="quiz-question"></p>
+      <input type="text" id="quiz-answer" placeholder="Your answer">
+      <button id="submit-answer">Submit Answer</button>
+      <p id="quiz-feedback"></p>
+    </div>
+    <div class="stats">
+      <p>✅ Correct: <span id="correct-counter">0</span></p>
+      <p>🔥 Streak: <span id="streak-counter">0</span></p>
+      <p>🏆 High Score: <span id="high-score">0</span></p>
+    </div>
+    <div id="game-over" class="hidden">🎮 GAME OVER! 🎮</div>
+  </div>
+
+  <!-- Fire Animation -->
+  <div id="fire-animation" class="hidden">🔥🔥🔥</div>
+
+<!-- 🎵 Dancing Robot Section -->
+<div id="robot-container">
+    <img id="dancing-robot" src="./IMAGES/dance1-removebg-preview.png" alt="Dancing Robot">
+    <img src="./IMAGES/dance2-removebg-preview.png" alt="">
+</div>
+
+  <script src="script3.js"></script>
+</body>
+</html>
+

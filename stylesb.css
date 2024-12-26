@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.highlight-name {
+    font-size: 1.5em; /* Slightly larger text */
+    font-weight: 700; /* Bold text */
+    color: #0078d7; /* Baskin-Robbins Blue */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Soft shadow */
+    margin-top: 10px; /* Space above */
+    animation: pulse 2s infinite ease-in-out; /* Subtle animation */
+}
+
+/* 🌟 Animation for Name */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05); /* Slightly grow */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Content Section */
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Section Styling */
+section {
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff; /* White background */
+}
+
+/* Header Styling */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    padding-right: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff80ab; /* Baskin-Robbins Pink */
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+    left: 85px;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #ffffff; /* White text for navigation */
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #0078d7; /* Baskin-Robbins Blue on hover */
+}
+
+/* Text Box Styling */
+.content .textBox {
+    position: relative;
+    max-width: 600px;
+    color: #454851; /* Neutral Gray */
+    font-size: 1em;
+    line-height: 1rem;
+    font-weight: 500;
+}
+
+.content .textBox h2 {
+    color: #e6397f; /* Dark Pink for Headings */
+    font-size: 4em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.content .textBox h2 span {
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #0078d7; /* Baskin-Robbins Blue */
+    font-size: 1em;
+    line-height: 1rem;
+}
+
+.content .textBox p {
+    color: #454851; /* Neutral Gray for Paragraph Text */
+}
+
+/* Button Styling */
+.content .textBox a {
+    display: inline-block;
+    margin: 20px;
+    padding: 8px 20px;
+    background-color: #ff80ab; /* Pink Button */
+    color: #ffffff; /* White Text */
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.content .textBox a:hover {
+    background-color: #e6397f; /* Darker Pink Hover */
+}
+
+/* Image Box Styling */
+.content .imgBox {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+.content .imgBox img {
+    max-width: 400px;
+}
+
+/* Thumbnail Styling */
+.thumb {
+    position: absolute;
+    display: flex;
+    left: 40%;
+    bottom: 10px;
+}
+
+.thumb li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+.thumb li:hover {
+    transform: translateY(-20px);
+}
+
+.thumb li img {
+    max-width: 100px;
+}
+
+/* Social Media Icons Styling */
+.socialmedia {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+}
+
+.socialmedia li {
+    list-style: none;
+    padding: 10px;
+}
+
+.socialmedia li a {
+    display: inline-block;
+    margin: 10px 0;
+    filter: invert(20%) sepia(100%) saturate(300%) hue-rotate(290deg); /* Pink Icons */
+}
+
+/* Circle Background Styling */
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff80ab; /* Baskin-Robbins Pink */
+    clip-path: circle(600px at right 800px);
+}
+
+
+/* 🥤 MILKSHAKE ANIMATIONS */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-7deg);
+    }
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(-7deg);
+    }
+}
+
+/* 🥤 MILKSHAKE IMAGE STYLING */
+.milkshake-box {
+    position: absolute;
+    bottom: 20%;
+    left: -5%;
+    width: 200px;
+    z-index: 2;
+    animation: float 4s infinite ease-in-out;
+}
+
+.milkshake {
+    transform: rotate(-5deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.milkshake:hover {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+
+/* 📌 NAVIGATION LINKS */
+header ul li a {
+    color: #ffffff; /* White text for navigation links */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #0078d7; /* Baskin Blue on hover */
+}
+
+/* 🛑 REMOVE EXTRA SPACE BELOW CONTENT */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent side scrolling */
+    min-height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 🟣 SECTION */
+section {
+    flex: 1; /* Take up all available space */
+    position: relative;
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* 🦶 FOOTER */
+footer {
+    background-color: #ff80ab; /* Baskin Pink */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1rem;
+    color: #ffffff; /* White text */
+    font-weight: 500;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+footer p strong {
+    color: #0078d7; /* Baskin Blue for emphasis */
+}
